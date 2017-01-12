@@ -20,7 +20,7 @@ angular.module('routes', [])
 
 I've used a template here, but you can use a templateUrl just as easily. The specs won't break.
 
-To test this, we're going to explicity set the $location, digest the $rootScope, then check that that $route has the correct values.
+To test this, we're going to explicitly set the $location, digest the $rootScope, then check that that $route has the correct values.
 
 ```
 describe('routes', () => {
@@ -40,7 +40,7 @@ describe('routes', () => {
 
     expect($route.current.template).toEqual('hello');
     expect($route.current.controller).toEqual('helloController');
-  })
+  });
 
   it('should route to world', function() {
     $location.path('/world');
@@ -52,3 +52,7 @@ describe('routes', () => {
   });
 });
 ```
+
+Exercise 1 - Test the app
+
+In your exercise folder, you'll find a simple two page application. Unfortunately, due to staff shortages, no tests were written for it. Write a spec, then add another route using TDD.
